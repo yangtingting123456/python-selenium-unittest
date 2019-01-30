@@ -16,7 +16,7 @@ class TestLogin(unittest.TestCase):
         accept_next_alert = True
 
     #oms登录
-    def test_login(self):
+    def test_alogin(self):
         try:
             driver = self.driver
             driver.get(self.base_url+"/login.jsp")
@@ -24,19 +24,27 @@ class TestLogin(unittest.TestCase):
             driver.find_element_by_id("_easyui_textbox_input2").send_keys("54321")
             driver.find_element_by_xpath("/html/body/div/div/form/p[3]/input").click()
         except:
-            print("登录失败")
+            print("登录失败！")
 
+   #退出登录
     def test_Quit(self):
         try:
             driver = self.driver
             driver.find_element_by_class_name("iconfont icon-tuichu font-red").click()
         except:
-            print("退出失败")
+            print("退出失败！")
+
+    def test_Tclose(self):
+        try:
+            driver = self.driver
+            driver.quit()
+        except:
+            print("关闭浏览器失败！")
 
 
     def tearDown(self):
         time.sleep(3)
-        self.driver.quit()
+        # self.driver.quit()
 
 if __name__ == '__main__':
     # 定义测试报告的地址
@@ -48,8 +56,9 @@ if __name__ == '__main__':
     else:
         pass
     suit = unittest.TestSuite()
-    suit.addTest(TestLogin('test_login'))
-    # suit.addTest(TestLogin('test_Quit'))
+    suit.addTest(TestLogin('test_alogin'))
+    suit.addTest(TestLogin('test_Quit'))
+    suit.addTest(TestLogin('test_Tclose'))
     fp = open(report_path, 'wb')
     runner = HTMLTestReportCN.HTMLTestRunner(
         stream=fp,

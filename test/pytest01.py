@@ -1,26 +1,28 @@
 from selenium import webdriver
 import unittest
 
-
 class SearchTests(unittest.TestSuite):
     def setUp(self):
-        self.driver = webdriver.Firefox()
-        self.driver.implicitly_wait(30)
+        self.driver=webdriver.Firefox()
         self.driver.maximize_window()
-
+        self.driver.implicitly_wait(30)
         self.driver.get("https://www.baidu.com")
 
-    def test_Search(self):
-        self.driver.find_element_by_name("wd").send_keys("selenium")
-        self.driver.find_element_by_id("su").click()
-        self.assertEqual(2,len(0))
+    def test_baidu_searsh(self):
+        self.wd= self.driver.find_element_by_name("wd")
+        self.wd.clear()
+        self.wd.send_keys("selenium")
+        self.su=self.driver.find_element_by_id("su")
+        self.su.clear()
+        self.su.click()
 
-    def teatDown(self):
+    def tearDown(self):
         self.driver.close()
 
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)
+
 
 
 # import unittest

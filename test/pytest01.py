@@ -1,6 +1,10 @@
 from selenium import webdriver
 import unittest
 import time
+from selenium.common.exceptions import NoSuchElementException
+from selenium.webdriver.common.by import By
+import HTMLTestReportCN
+import os
 
 class SearchTests(unittest.TestCase):
     @classmethod
@@ -48,7 +52,29 @@ class SearchTests(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    unittest.main(verbosity=2)
+    path = os.getcwd()
+    report_path = path + 'result.html'
+    # 如果路径不存在，创建路径
+    if not os.path.exists(path):
+        os.makedirs(path)
+    else:
+        pass
+    suit = unittest.TestSuite()
+    suit.addTest(SearchTests('test_baidu_searsh2'))
+    suit.addTest(SearchTests('test_baidu_searsh3'))
+    suit.addTest(SearchTests('test_baidu_searsh4'))
+    suit.addTest(SearchTests('test_baidu_searsh1'))
+
+    fp = open(report_path, 'wb')
+    runner = HTMLTestReportCN.HTMLTestRunner(
+        stream=fp,
+        title='百度自动化搜索',
+        description='报告中描述部分',
+        tester='杨婷婷'
+    )
+    # 执行测试
+    runner.run(suit)
+
 
 
 

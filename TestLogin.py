@@ -25,14 +25,15 @@ class TestLogin(unittest.TestCase):
             driver.find_element_by_xpath("/html/body/div/div/form/p[3]/input").click()
         except:
             print("登录失败！")
+
     def test_bBewEasy(self):
         try:
             driver =self.driver
             driver.find_element_by_link_text("文章管理").click()
             driver.find_element_by_link_text("新增").click()
-            driver.find_element_by_id("_easyui_textbox_input12").send_keys("文章标题1")
-            driver.find_element_by_id("_easyui_textbox_input13").send_keys("文章副标题1")
-            driver.find_element_by_id("_easyui_textbox_input17").send_keys("自动化测试")
+            driver.find_element_by_id("_easyui_textbox_input12").send_keys("文章标题15")
+            driver.find_element_by_id("_easyui_textbox_input13").send_keys("文章副标题15")
+            driver.find_element_by_id("_easyui_textbox_input17").send_keys("自动化测试5")
             time.sleep(3)
             driver.find_element_by_class_name("view").click()
         except:
@@ -63,7 +64,7 @@ class TestLogin(unittest.TestCase):
 
 if __name__ == '__main__':
     # 定义测试报告的地址
-    path = 'D:\\result\\'
+    path = os.getcwd()
     report_path = path + 'result.html'
     # 如果路径不存在，创建路径
     if not os.path.exists(path):

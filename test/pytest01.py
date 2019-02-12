@@ -1,33 +1,50 @@
 from selenium import webdriver
 import unittest
+import time
 
 class SearchTests(unittest.TestCase):
-        def setUp(self):
-            self.driver=webdriver.Firefox()
-            self.driver.implicitly_wait(30)
-            self.driver.maximize_window()
-            self.driver.get("https://www.baidu.com")
+    @classmethod
+    def setUpClass(cls):
+        cls.driver=webdriver.Firefox()
+        cls.driver.implicitly_wait(30)
+        cls.driver.maximize_window()
+        # self.driver.get("https://www.baidu.com")
 
-        def test_baidu_searsh1(self):
-            self.wd= self.driver.find_element_by_name("wd")
-            self.wd.send_keys("selenium")
-            self.su=self.driver.find_element_by_id("su")
-            self.su.click()
+    def test_baidu_searsh1(self):
+        time.sleep(3)
+        self.driver.get("https://www.baidu.com")
+        self.wd= self.driver.find_element_by_name("wd")
+        self.wd.send_keys("selenium")
+        self.su=self.driver.find_element_by_id("su")
+        self.su.click()
 
-        def test_baidu_searsh2(self):
-            self.wd = self.driver.find_element_by_name("wd")
-            self.wd.send_keys("python")
-            self.su = self.driver.find_element_by_id("su")
-            self.su.click()
+    def test_baidu_searsh2(self):
+        time.sleep(3)
+        self.driver.get("https://www.baidu.com")
+        self.wd = self.driver.find_element_by_name("wd")
+        self.wd.send_keys("python")
+        self.su = self.driver.find_element_by_id("su")
+        self.su.click()
 
-        def test_baidu_searsh3(self):
-            self.wd = self.driver.find_element_by_name("wd")
-            self.wd.send_keys("unittest")
-            self.su = self.driver.find_element_by_id("su")
-            self.su.click()
+    def test_baidu_searsh3(self):
+        time.sleep(3)
+        self.driver.get("https://www.baidu.com")
+        self.wd = self.driver.find_element_by_name("wd")
+        self.wd.send_keys("unittest")
+        self.su = self.driver.find_element_by_id("su")
+        self.su.click()
 
-        def tearDown(self):
-            self.driver.close()
+    def test_baidu_searsh4(self):
+        time.sleep(3)
+        self.driver.get("https://www.baidu.com")
+        self.wd = self.driver.find_element_by_name("wd")
+        self.wd.send_keys("jenkins")
+        self.su = self.driver.find_element_by_id("su")
+        self.su.click()
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.driver.close()
 
 
 if __name__ == '__main__':

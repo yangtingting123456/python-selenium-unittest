@@ -5,6 +5,7 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
 import HTMLTestReportCN
 import os
+from TestLogin import TestLogin
 
 class SearchTests(unittest.TestCase):
     @classmethod
@@ -64,6 +65,11 @@ if __name__ == '__main__':
     suit.addTest(SearchTests('test_baidu_searsh3'))
     suit.addTest(SearchTests('test_baidu_searsh4'))
     suit.addTest(SearchTests('test_baidu_searsh1'))
+    time.sleep(3)
+    suit.addTest(TestLogin('test_alogin'))
+    suit.addTest(TestLogin('test_bBewEasy'))
+    suit.addTest(TestLogin('test_Quit'))
+    suit.addTest(TestLogin('test_Tclose'))
 
     fp = open(report_path, 'wb')
     runner = HTMLTestReportCN.HTMLTestRunner(

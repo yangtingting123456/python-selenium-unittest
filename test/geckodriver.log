@@ -883,3 +883,46 @@ bail@chrome://marionette/content/sync.js:196:64
 [GPU 27580, Chro
 ###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
 
+1549961518822	mozrunner::runner	INFO	Running command: "E:\\Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\HONGCH~1.YAN\\AppData\\Local\\Temp\\rust_mozprofile.JzOrF4zR3cNq"
+1549961520134	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1549961520134	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+1549961523060	Marionette	INFO	Listening on port 59953
+1549961523262	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Child 28276, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_chann[el_win.cc, line 332Child 22016, Chrome_ChildThr
+ead] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 332
+[Chil1549961526058	Marionette	INFO	Stopped listening on port 59953
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[GPU 116, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/c
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1549961576315	mozrunner::runner	INFO	Running command: "E:\\Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\HONGCH~1.YAN\\AppData\\Local\\Temp\\rust_mozprofile.U2UgWZMPMnrd"
+1549961577618	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1549961577618	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+1549961580523	Marionette	INFO	Listening on port 60122
+1549961580735	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/plugins/every_cookie_4644b13.js, line 4: ReferenceError: c is not defined
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=py&json=1&p=3&sid=26523_1448_21111_28414&req=2&csor=2&pwd=p&cb=jQuery110207717610192938901_1549961584698&_=1549961584701, line 1: TypeError: jQuery110207717610192938901_1549961584698 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=pyth&json=1&p=3&sid=26523_1448_21111_28414&req=2&csor=4&pwd=pyt&cb=jQuery110207717610192938901_1549961584698&_=1549961584703, line 1: TypeError: jQuery110207717610192938901_1549961584698 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=pyt&json=1&p=3&sid=26523_1448_21111_28414&req=2&csor=3&pwd=py&cb=jQuery110207717610192938901_1549961584698&_=1549961584702, line 1: TypeError: jQuery110207717610192938901_1549961584698 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=pytho&json=1&p=3&sid=26523_1448_21111_28414&req=2&csor=5&pwd=pyth&cb=jQuery110207717610192938901_1549961584698&_=1549961584704, line 1: TypeError: jQuery110207717610192938901_1549961584698 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=python&json=1&p=3&sid=26523_1448_21111_28414&req=2&csor=6&pwd=pytho&cb=jQuery110207717610192938901_1549961584698&_=1549961584705, line 1: TypeError: jQuery110207717610192938901_1549961584698 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=unittes&json=1&p=3&sid=26523_1448_21111_28414&req=2&csor=7&pwd=unitte&cb=jQuery110206359406716526187_1549961588816&_=1549961588824, line 1: TypeError: jQuery110206359406716526187_1549961588816 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=unittest&json=1&p=3&sid=26523_1448_21111_28414&req=2&csor=8&pwd=unittes&cb=jQuery110206359406716526187_1549961588816&_=1549961588825, line 1: TypeError: jQuery110206359406716526187_1549961588816 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=jenkins&json=1&p=3&sid=26523_1448_21111_28414&req=2&csor=7&pwd=jenkin&cb=jQuery1102044757604751571056_1549961592525&_=1549961592533, line 1: TypeError: jQuery1102044757604751571056_1549961592525 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=seleni&json=1&p=3&sid=26523_1448_21111_28414&req=2&csor=6&pwd=selen&cb=jQuery1102005653206097717178_1549961596182&_=1549961596189, line 1: TypeError: jQuery1102005653206097717178_1549961596182 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=selen&json=1&p=3&sid=26523_1448_21111_28414&req=2&csor=5&pwd=sele&cb=jQuery1102005653206097717178_1549961596182&_=1549961596188, line 1: TypeError: jQuery1102005653206097717178_1549961596182 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=seleniu&json=1&p=3&sid=26523_1448_21111_28414&req=2&csor=7&pwd=seleni&cb=jQuery1102005653206097717178_1549961596182&_=1549961596190, line 1: TypeError: jQuery1102005653206097717178_1549961596182 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=selenium&json=1&p=3&sid=26523_1448_21111_28414&req=2&csor=8&pwd=seleniu&cb=jQuery1102005653206097717178_1549961596182&_=1549961596191, line 1: TypeError: jQuery1102005653206097717178_1549961596182 is not a function
+1549961596695	Marionette	INFO	Stopped listening on port 60122
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[Child 6260, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chro
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+mium/src/chrome/common/ipc_channel_win.cc, line 332
+[GPU 28060, Chr
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+

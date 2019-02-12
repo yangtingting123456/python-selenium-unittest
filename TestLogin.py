@@ -6,11 +6,12 @@ import os
 from Email_Fu import Email_Fu
 
 class TestLogin(unittest.TestCase):
-    driver = webdriver.Chrome()
-    base_url = "http://192.168.6.51:8080"
-    def setUp(self):
-        self.driver=self.driver
-        self.driver.implicitly_wait(30)
+    @classmethod
+    def setUpClass(cls):
+        cls.driver = webdriver.Chrome()
+        cls.base_url = "http://192.168.6.51:8080"
+        cls.driver=cls.driver
+        cls.driver.implicitly_wait(30)
         base_url = "http://192.168.6.51:8080"
         verificationErrors = []
         accept_next_alert = True
@@ -58,9 +59,10 @@ class TestLogin(unittest.TestCase):
             print("关闭浏览器失败！")
 
    #清理工作
-    def tearDown(self):
+    @classmethod
+    def tearDownClass(cls):
         time.sleep(3)
-        # self.driver.quit()
+        cls.driver.quit()
 
 if __name__ == '__main__':
     # 定义测试报告的地址

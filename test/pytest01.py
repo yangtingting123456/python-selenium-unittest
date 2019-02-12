@@ -1,23 +1,33 @@
 from selenium import webdriver
 import unittest
 
-class SearchTests(unittest.TestSuite):
-    def setUp(self):
-        self.driver=webdriver.Firefox()
-        self.driver.maximize_window()
-        self.driver.implicitly_wait(30)
-        self.driver.get("https://www.baidu.com")
+class SearchTests(unittest.TestCase):
+        def setUp(self):
+            self.driver=webdriver.Firefox()
+            self.driver.implicitly_wait(30)
+            self.driver.maximize_window()
+            self.driver.get("https://www.baidu.com")
 
-    def test_baidu_searsh(self):
-        self.wd= self.driver.find_element_by_name("wd")
-        self.wd.clear()
-        self.wd.send_keys("selenium")
-        self.su=self.driver.find_element_by_id("su")
-        self.su.clear()
-        self.su.click()
+        def test_baidu_searsh1(self):
+            self.wd= self.driver.find_element_by_name("wd")
+            self.wd.send_keys("selenium")
+            self.su=self.driver.find_element_by_id("su")
+            self.su.click()
 
-    def tearDown(self):
-        self.driver.close()
+        def test_baidu_searsh2(self):
+            self.wd = self.driver.find_element_by_name("wd")
+            self.wd.send_keys("python")
+            self.su = self.driver.find_element_by_id("su")
+            self.su.click()
+
+        def test_baidu_searsh3(self):
+            self.wd = self.driver.find_element_by_name("wd")
+            self.wd.send_keys("unittest")
+            self.su = self.driver.find_element_by_id("su")
+            self.su.click()
+
+        def tearDown(self):
+            self.driver.close()
 
 
 if __name__ == '__main__':

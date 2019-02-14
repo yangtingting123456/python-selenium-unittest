@@ -1,6 +1,7 @@
 import unittest
 from selenium import webdriver
 import time
+from selenium.webdriver.common.alert import Alert
 
 class Test_BaiDu(unittest.TestCase):
     @classmethod
@@ -21,7 +22,7 @@ class Test_BaiDu(unittest.TestCase):
         time.sleep(3)
         self.driver.find_element_by_link_text('立即注册').click()
         current_handle2 = self.driver.current_window_handle
-        print('current_handle2'+current_handle2)
+        print('current_handle2：'+current_handle2)
         time.sleep(3)
         all_handles=self.driver.window_handles
         print(all_handles)
@@ -31,12 +32,19 @@ class Test_BaiDu(unittest.TestCase):
                 print("now is not in current_handle")
                 self.driver.find_element_by_id('TANGRAM__PSP_3__userName').send_keys('ytt05_091')
                 self.driver.find_element_by_id('TANGRAM__PSP_3__phone').send_keys('17633710286')
+
                 self.driver.find_element_by_id('').send_keys('ytt05_09')
-                self.driver.find_element_by_id('TANGRAM__PSP_3__verifyCodeSend').click()
-                a = input('请手动输入验证码')
-                self.driver.find_element_by_id('TANGRAM__PSP_3__verifyCode').send_keys(a)
-                self.driver.find_element_by_id('TANGRAM__PSP_3__isAgree').click()
-                self.driver.find_element_by_id('TANGRAM__PSP_3__submit').click()
+                # self.driver.find_element_by_id('TANGRAM__PSP_3__verifyCodeSend').click()
+                # a = input('请手动输入验证码')
+                # self.driver.find_element_by_id('TANGRAM__PSP_3__verifyCode').send_keys(a)
+                # self.driver.find_element_by_id('TANGRAM__PSP_3__isAgree').click()
+                # self.driver.find_element_by_id('TANGRAM__PSP_3__submit').click()
+
+            alert=self.driver.switch_to_alert()
+            
+            time.sleep(6)
+            alert.accept()
+            alert=self.driver.find_element_by_id("TANGRAM__PSP_22__confirm_continue").click()
 
 
 

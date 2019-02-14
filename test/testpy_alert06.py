@@ -10,7 +10,9 @@ class test_alert(unittest.TestCase):
         cls.driver = webdriver.Firefox()
         cls.driver.implicitly_wait(30)
         # driver.maximize_window()
-        cls.driver.get('file:///C:/Users/hongchao.yang/Desktop/index.html')
+        get_path = os.getcwd()
+        path = get_path + 'index.html'
+        cls.driver.get('file:///E:/Python37/Scripts/TestL/index.html')
 
     #confirm对话框---点击确认按钮
     def test_confirm_accept(self):
@@ -68,7 +70,7 @@ class test_alert(unittest.TestCase):
 
 if __name__ == '__main__':
     path = os.getcwd()
-    report_path = path + 'result.html'
+    report_path = path + 'Report.html'
     # 如果路径不存在，创建路径
     if not os.path.exists(path):
         os.makedirs(path)

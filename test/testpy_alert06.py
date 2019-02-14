@@ -88,7 +88,7 @@ if __name__ == '__main__':
     fp = open(report_path, 'wb')
     runner = HTMLTestReportCN.HTMLTestRunner(
         stream=fp,
-        title='百度自动化搜索',
+        title='三种对话框的测试用例',
         description='报告中描述部分',
         tester='杨婷婷'
     )

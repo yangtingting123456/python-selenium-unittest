@@ -45,9 +45,10 @@ driver.find_element_by_id('pass-mobile-sure-btn').click()
 time.sleep(3)
 ActionChains(driver).move_to_element(driver.find_element_by_link_text('巨蟹和别的')).perform()
 driver.find_element_by_link_text('退出').click()
-
+time.sleep(3)
+driver.find_element_by_link_text('确定').click()
 
 time.sleep(6)
 
-
+driver.quit()
 

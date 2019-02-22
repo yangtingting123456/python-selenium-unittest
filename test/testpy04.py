@@ -85,6 +85,9 @@ time.sleep(3)
 # # 获得当前所有打开的窗口的句柄
 # all_handles = driver.window_handles
 #
+
+
+
 # # 进入注册窗口
 # for handle in all_handles:
 #     if handle!=search_windows:

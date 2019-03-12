@@ -9,27 +9,35 @@ class TimeSheet(unittest.TestCase):
         cls.driver.get("http://timesheet.juneyaokc.com/auth/login")
         cls.driver.maximize_window()
         cls.driver.implicitly_wait(30)
-
-    def test_Login(self):
-        self.driver.get("http://timesheet.juneyaokc.com/auth/login")
-        #输入用户名
-        self.driver.find_element_by_name('adminUsername').send_keys('杨婷婷')
-        # 输入密码
-        self.driver.find_element_by_name('adminPassword').send_keys('ytt123456')
-        # 点击登陆代码
-        self.driver.find_element_by_xpath('/html/body/div[2]/div/div/div/div[2]/form/div[4]/button').click()
-        time.sleep(3)
-        self.driver.quit()
-
-    def test_Add(self):
-        self.driver.get("http://timesheet.juneyaokc.com/auth/login")
         # 输入用户名
-        self.driver.find_element_by_name('adminUsername').send_keys('杨婷婷')
+        cls.driver.find_element_by_name('adminUsername').send_keys('杨婷婷')
         # 输入密码
-        self.driver.find_element_by_name('adminPassword').send_keys('ytt123456')
+        cls.driver.find_element_by_name('adminPassword').send_keys('ytt123456')
         # 点击登陆代码
-        self.driver.find_element_by_xpath('/html/body/div[2]/div/div/div/div[2]/form/div[4]/button').click()
-        time.sleep(1.5)
+        cls.driver.find_element_by_xpath('/html/body/div[2]/div/div/div/div[2]/form/div[4]/button').click()
+        time.sleep(3)
+
+    # def test_Login(self):
+    #     self.driver.get("http://timesheet.juneyaokc.com/auth/login")
+    #     #输入用户名
+    #     time.sleep(3)
+    #     self.driver.find_element_by_name('adminUsername').send_keys('杨婷婷')
+    #     # 输入密码
+    #     time.sleep(3)
+    #     self.driver.find_element_by_name('adminPassword').send_keys('ytt123456')
+    #     # 点击登陆代码
+    #     self.driver.find_element_by_xpath('/html/body/div[2]/div/div/div/div[2]/form/div[4]/button').click()
+
+
+    def test_Yadd(self):
+        # self.driver.get("http://timesheet.juneyaokc.com/auth/login")
+        # # 输入用户名
+        # self.driver.find_element_by_name('adminUsername').send_keys('杨婷婷')
+        # # 输入密码
+        # self.driver.find_element_by_name('adminPassword').send_keys('ytt123456')
+        # # 点击登陆代码
+        # self.driver.find_element_by_xpath('/html/body/div[2]/div/div/div/div[2]/form/div[4]/button').click()
+        # time.sleep(1.5)
         self.driver.find_element_by_xpath('/html/body/div[2]/div/div[2]/div/div[2]/table/tbody/tr[1]/td[1]/input').click()
         time.sleep(1.5)
         #选择需要填入工时的日期
@@ -56,6 +64,11 @@ class TimeSheet(unittest.TestCase):
         time.sleep(3)
         self.driver.quit()
 
+    # def test_ZDelete(self):
+    #     time.sleep(6)
+    #     self.driver.find_element_by_css_selector('#obj_table > tbody:nth-child(1) > tr:nth-child(4) > td:nth-child(5) > a:nth-child(1)').click()
+    #     self.driver.switch_to_alert().accept()
+
     @classmethod
     def tearDownClass(cls):
         time.sleep(1.5)
@@ -63,7 +76,6 @@ class TimeSheet(unittest.TestCase):
             cls.driver.quit()
         except:
             print('e')
-
 
 
 if __name__ == '__main__':

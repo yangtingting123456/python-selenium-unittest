@@ -10,4 +10,5 @@ for i in range(1,10000):
        nowTime = time.strftime("%Y%m%d.%H.%M.%S")
        driver.get_screenshot_as_file('%s.png' % nowTime)
        print(driver.current_url)
+       time.sleep(3)
        driver.quit()
